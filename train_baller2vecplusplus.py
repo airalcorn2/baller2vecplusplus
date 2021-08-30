@@ -252,17 +252,9 @@ def train_model():
         total_train_loss /= n_train
         if total_train_loss < best_train_loss:
             best_train_loss = total_train_loss
-            no_improvement = 0
             if task == "toy":
                 torch.save(optimizer.state_dict(), f"{JOB_DIR}/optimizer.pth")
                 torch.save(model.state_dict(), f"{JOB_DIR}/best_params.pth")
-
-        # elif no_improvement < 3:
-        #     no_improvement += 1
-        #     if no_improvement == 3:
-        #         print("Reducing learning rate.")
-        #         for g in optimizer.param_groups:
-        #             g["lr"] *= 0.1
 
         if task == "toy":
             train_tensors = train_dataset[0]
