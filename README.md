@@ -135,8 +135,6 @@ echo "  task: ${task}" >> ${JOB}.yaml
 if [[ "$task" = "basketball" ]]
 then
 
-    echo "  train_valid_prop: 0.95" >> ${JOB}.yaml
-    echo "  train_prop: 0.95" >> ${JOB}.yaml
     echo "  train_samples_per_epoch: 20000" >> ${JOB}.yaml
     echo "  valid_samples: 1000" >> ${JOB}.yaml
     echo "  workers: 10" >> ${JOB}.yaml
