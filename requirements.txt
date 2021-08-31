@@ -1,0 +1,8 @@
+matplotlib
+py7zr
+torch
+scipy
+numpy
+pandas
+Pillow
+PyYAML
